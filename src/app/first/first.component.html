@@ -1,8 +1,8 @@
-<p>tow way data binding</p>
-<img [src]="url" [alt]="alt">
-<h1>{{name}}</h1>
-<h1>{{age}}</h1>
-<h1>{{binding}}</h1>
-<button (click)="Onchange()"> click me</button>
-
-<input [(ngModel)]="binding" type="text" placeholder="enter name" >
+<div>
+    <h1> {{user.name}} </h1>    
+    <h1> {{myName}} </h1>    
+    <p> {{user.age}} </p>
+    <img [src]="user.img" alt="">
+    <button (click)="Change()">Click me to Change the name</button>
+</div>
+<input type="text" [(ngModel)]="myName">
