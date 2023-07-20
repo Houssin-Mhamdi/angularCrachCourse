@@ -1,5 +1,8 @@
-<p>event binding</p>
+<p>tow way data binding</p>
 <img [src]="url" [alt]="alt">
 <h1>{{name}}</h1>
 <h1>{{age}}</h1>
+<h1>{{binding}}</h1>
 <button (click)="Onchange()"> click me</button>
+
+<input [(ngModel)]="binding" type="text" placeholder="enter name" >
