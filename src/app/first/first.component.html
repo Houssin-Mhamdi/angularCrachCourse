@@ -2,7 +2,14 @@
     <h1> {{user.name}} </h1>    
     <h1> {{myName}} </h1>    
     <p> {{user.age}} </p>
-    <img [src]="user.img" alt="">
+    <img *ngIf="display == true" [src]="user.img" alt="">
     <button (click)="Change()">Click me to Change the name</button>
 </div>
 <input type="text" [(ngModel)]="myName">
+<p *ngFor="let item of cars">{{item}}</p>
+<div *ngFor="let item of student" [ngClass]="{bgRed:item.age>20,bgGreen:item.age == 20}">
+    <ng-container *ngIf="item.age >= 20" >
+        <h1> {{item.name}} </h1>
+        <p> {{item.age}} </p>
+    </ng-container>
+</div>

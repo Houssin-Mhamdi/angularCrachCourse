@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
   
+  display = true;
+
   user={
     name:"housiin",
     age:30,
@@ -14,10 +16,28 @@ export class FirstComponent implements OnInit {
   }
   myName = ''
   Change(){
-    this.user.name = this.myName
+    this.display = !this.display
   }
 
-
+  cars =[
+    "bmw",
+    "toyota",
+    "pyjo"
+  ]
+  student = [
+    {
+      name:"houssin",
+      age:20
+    },
+    {
+      name:"ahmed",
+      age:25
+    },
+    {
+      name:"hamdi",
+      age:30
+    },
+  ]
 
   constructor(){}
 
