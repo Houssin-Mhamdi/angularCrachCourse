@@ -1,15 +1,9 @@
-<div>
-    <h1> {{user.name}} </h1>    
-    <h1> {{myName}} </h1>    
-    <p> {{user.age}} </p>
-    <img *ngIf="display == true" [src]="user.img" alt="">
-    <button (click)="Change()">Click me to Change the name</button>
-</div>
-<input type="text" [(ngModel)]="myName">
-<p *ngFor="let item of cars">{{item}}</p>
-<div *ngFor="let item of student" [ngClass]="{bgRed:item.age>20,bgGreen:item.age == 20}">
-    <ng-container *ngIf="item.age >= 20" >
-        <h1> {{item.name}} </h1>
-        <p> {{item.age}} </p>
-    </ng-container>
-</div>
+<h1 class="text-white text-2xl text-center mt-28 mb-10">Hero App</h1>
+
+<section class="container mx-auto px-36">
+       
+    <app-addposts></app-addposts>
+    <app-listes></app-listes>
+      
+</section>
+
