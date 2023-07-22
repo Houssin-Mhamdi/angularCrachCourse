@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AddpostsComponent } from './addposts/addposts.component';
 import { ListesComponent } from './listes/listes.component';
 import { HeaderComponent } from './header/header.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
     FirstComponent,
     AddpostsComponent,
     ListesComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
