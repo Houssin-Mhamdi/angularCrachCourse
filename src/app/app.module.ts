@@ -7,13 +7,15 @@ import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
 import { AddpostsComponent } from './addposts/addposts.component';
 import { ListesComponent } from './listes/listes.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     AddpostsComponent,
-    ListesComponent
+    ListesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
