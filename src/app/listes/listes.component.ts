@@ -9,14 +9,34 @@ import { SharedService } from '../shared.service';
 export class ListesComponent implements OnInit {
 
 
+  posts:any
 
-constructor( public shared:SharedService){}
+constructor( private shared:SharedService){}
+updateItem(){
 
+}
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
- 
+deletItem(id:number){
+return this.shared.deletePost(id).subscribe(data =>{
+  console.log(data); 
+  this.ngOnInit()
+}, err =>{
+  console.log(err);
+})
+}
+
+ngOnInit(): void {
+  this.shared.getAllPosts().subscribe(
+    data => {
+      console.log(data);
+      this.posts = data
+    },
+    error => {
+      console.error('Error fetching posts:', error);
+    }
+  );
+}
+
    
   
   

@@ -14,7 +14,12 @@ export class AddpostsComponent {
    }
   
    addPost(){
-    this.shared.posts.push(this.post)
+    this.shared.createPost(this.post).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err=>console.log(err)
+    )
     this.post = {
       name:"",
       power:0,

@@ -10,6 +10,7 @@ import { ListesComponent } from './listes/listes.component';
 import { HeaderComponent } from './header/header.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from  '@angular/common/http';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from  '@angular/common/http';
     AddpostsComponent,
     ListesComponent,
     HeaderComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

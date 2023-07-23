@@ -1,5 +1,5 @@
 <div class="container mx-auto px-28 flex flex-wrap gap-10">
-    <section class="" *ngFor="let item of shared.posts">
+    <section class="" *ngFor="let item of posts">
         <div class="w-64 h-72 p-2 bg-slate-400">
             <img [src]="item.img" alt="">
             <div class="flex mt-7">
@@ -7,6 +7,10 @@
             </div>
             <div class="flex">
                 <p class="text-white">Power: {{item.power}}</p>
+            </div>
+            <div class="flex items-center gap-10">
+                <button (click)="deletItem(item.id)" class="px-6 py-1 bg-red-600 text-white">Delete</button>
+                <button [routerLink]="['/update',item.id]" routerLinkActive="router-link-active"  class="px-6 py-1 bg-green-600 text-white">Update</button>
             </div>
         </div>
     </section>
