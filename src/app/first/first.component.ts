@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-first',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-
-  constructor(){}
-
+  constructor( private shared:SharedService){}
   ngOnInit(): void {
    
   }
